@@ -1,5 +1,6 @@
 # Hole In The Wall: VR + Kinect
-### Thomas Stranick & Prof. Lopez
+### Thomas Stranick & Prof. Christian Lopez
+[sites.lafayette.edu/lopezbec](https://sites.lafayette.edu/lopezbec)
 
 ---
 
@@ -30,3 +31,11 @@ This gamification application aims to integrate the body tracking of the Kinect 
 - Spawning the Oculus headset view inside the Avatar head: https://youtu.be/dvUUkWfhSsc  
 
   In previous videos using the Kinect and Oculus they were never lined up. In order to fix this, the difference between the starting headset and avatar positioning and rotation was taken. The headset then moved to the corresponding position utilizing that calculation. This allows for a much more immersive experinece when the body in the VR world more closely mimics the one you have in the real world. If it is out of sync it breaks immersion.  
+
+
+
+## References
+ Lopez, C. E., and Tucker, C. S., “The effects of player type on performance: A gamification case study,” Computers in Human Behavior (2019) 91, 333-345 ([doi:10.1016/j.chb.2018.10.005](https://www.sciencedirect.com/science/article/pii/S0747563218304898?via%3Dihub))
+ 
+Lopez, C. E., and Tucker, C. S., “A quantitative method for evaluating the complexity of implementing and performing game features in physically-interactive gamified applications,” Computers in Human Behavior (2017), 71, 42-58 ([doi: 10.1016/j.chb.2017.01.036](https://www.sciencedirect.com/science/article/pii/S0747563217300481?via%3Dihub) )
+
