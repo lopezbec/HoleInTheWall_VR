@@ -27,3 +27,6 @@ This gamification application aims to integrate the body tracking of the Kinect 
 
   In order to make it more immersive and interactable the controllers were taken away and the Kinect motion tracking is all thats needed in order to press buttons and such. Colliders were added to the hands as well as the buttons that allow for triggering when they touch each other. Much like pressing a button in real life the user will now have to reach out to press the button in game rather than pointing at it with the controller. This also allowed for easier tracking of the hands when not holding controllers.
 
+- Spawning the Oculus headset view inside the Avatar head: https://youtu.be/dvUUkWfhSsc  
+
+  In previous videos using the Kinect and Oculus they were never lined up. In order to fix this, the difference between the starting headset and avatar positioning and rotation was taken. The headset then moved to the corresponding position utilizing that calculation. This allows for a much more immersive experinece when the body in the VR world more closely mimics the one you have in the real world. If it is out of sync it breaks immersion.  
