@@ -32,7 +32,7 @@ This gamification application aims to integrate the body tracking of the Kinect 
 
   In previous videos using the Kinect and Oculus they were never lined up. In order to fix this, the difference between the starting headset and avatar positioning and rotation was taken. The headset then moved to the corresponding position utilizing that calculation. This allows for a much more immersive experinece when the body in the VR world more closely mimics the one you have in the real world. If it is out of sync it breaks immersion.  
 
--First UI Improvements and base Voice Recognition: https://www.youtube.com/watch?v=d25_yzMvHbI
+- First UI Improvements and base Voice Recognition: https://www.youtube.com/watch?v=d25_yzMvHbI
 
 The UI needed to be updated to reflect the current project and make it look a little nicer. The voice recognition system was also put in place to allow users to spell their name by saying letters into the microphone. This will be looked at further in having the game take full names or typing the name out on a keyboard to make it work better and easier.
 
