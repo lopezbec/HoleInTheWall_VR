@@ -35,6 +35,10 @@ This gamification application aims to integrate the body tracking of the Kinect 
 - First UI Improvements and base Voice Recognition: https://www.youtube.com/watch?v=d25_yzMvHbI
 
   The UI needed to be updated to reflect the current project and make it look a little nicer. The voice recognition system was also put in place to allow users to spell their name by saying letters into the microphone. This will be looked at further in having the game take full names or typing the name out on a keyboard to make it work better and easier.
+  
+- Full Game Demonstration: https://youtu.be/C_AJxUklfSw 
+
+  This is the full demonstration of the Hole in the Wall VR application. The user can interact with the menu fully and play the game immersively. The menu was redesigned for cleanliness and tweaks were made to allow the user to reset their head position if it was misaligned. 
 
 ## References
  Lopez, C. E., and Tucker, C. S., “The effects of player type on performance: A gamification case study,” Computers in Human Behavior (2019) 91, 333-345 ([doi:10.1016/j.chb.2018.10.005](https://www.sciencedirect.com/science/article/pii/S0747563218304898?via%3Dihub))
