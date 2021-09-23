@@ -65,6 +65,8 @@ This gamification application aims to integrate the body tracking of the Kinect 
 
 
 ## References
+Thomas Stranick, “Leveraging Virtual Reality and Exergames to promote physical activity”, in International Conference on Human-Computer Interaction, Virtual Conference, July 24-29, 2021 ISBN: 978-3-030-78644-1.
+	
  Lopez, C. E., and Tucker, C. S., “The effects of player type on performance: A gamification case study,” Computers in Human Behavior (2019) 91, 333-345 ([doi:10.1016/j.chb.2018.10.005](https://www.sciencedirect.com/science/article/pii/S0747563218304898?via%3Dihub))
  
 Lopez, C. E., and Tucker, C. S., “A quantitative method for evaluating the complexity of implementing and performing game features in physically-interactive gamified applications,” Computers in Human Behavior (2017), 71, 42-58 ([doi: 10.1016/j.chb.2017.01.036](https://www.sciencedirect.com/science/article/pii/S0747563217300481?via%3Dihub) )
