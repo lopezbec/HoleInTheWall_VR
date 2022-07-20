@@ -1,5 +1,4 @@
 # Hole In The Wall: VR + Kinect
-### Thomas Stranick & Prof. Christian Lopez
 [sites.lafayette.edu/lopezbec](https://sites.lafayette.edu/lopezbec)
 
 ---
@@ -74,8 +73,15 @@ Lopez, C. E., and Tucker, C. S., “A quantitative method for evaluating the com
   
   
 
+# Hole In The Wall: Reinforcement Learning to personalized obstacles
+
+In this part of the project the goal is to train a reinforcement Learning Agent to automatically generate new obstacles of different levels of complexity. This with the goal to tailor the obstacles based on individual skills level. In order to achieve this, we first need to figure out a way to automatically measure the complexity of obstacles (i.e., how much energy would an average human use to complete it). To automate this process, the goal is to train a Avatar to pass through obstacles. 
+
+In the videos below, you will see the Avatar that was controlled to pass via some obstacles along with the “energy expenditure” of the movement. This “energy expenditure” is calculated based on the movement of the limbs. 
 
 
+https://youtu.be/8b6lvpn1zUY
 
+https://youtu.be/azZkS3HQiZM
 
-
+https://youtu.be/BpOi5kvXe70
