@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     private static GameController gc;
     private static bool gameOn = false;
     private static DateTime startTime;
-    private static GameObject level;
+    private static GameObject[] levels;
     private static double speed = -2;
     private static int gameScore;
     private static int coinCount;
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Debug.Log("started");
-        level = GameObject.FindWithTag("Level");
+        
         GameObject scoreTextObj = GameObject.FindWithTag("ScoreText");
         scoreText = scoreTextObj.GetComponent<TMP_Text>();
         gc = this;
@@ -41,11 +41,16 @@ public class GameController : MonoBehaviour
     {
         if (gameOn)
         {
-            level.transform.position += new Vector3(0, 0, (float)speed * Time.deltaTime);
-            gameScore = (int)((Mathf.Abs(level.transform.position.z - 10)) - gameScoreDeductions);
-            if (level.transform.position.z < -280) 
+            levels = GameObject.FindGameObjectsWithTag("Level");
+
+            foreach (GameObject level in levels)
             {
-                level.transform.position += new Vector3(0, 0, 290);
+                level.transform.position += new Vector3(0, 0, (float)speed * Time.deltaTime);
+            }
+            
+            gameScore = (int)((Mathf.Abs(levels[0].transform.position.z - 10)) - gameScoreDeductions);
+            if (levels[0].transform.position.z < -280) 
+            {
                 GameOver();
             }
         }
@@ -152,12 +157,12 @@ public class GameController : MonoBehaviour
         streak++;
     }
 
-    public void minusStreak()
+    public static void minusStreak()
     {
         streak--;
     }
 
-    public int getStreak()
+    public static int getStreak()
     {
         return streak;
     }
@@ -257,7 +262,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void resetCollisions()
+    public static void resetCollisions()
     {
         collisionCount = 0;
     }
@@ -265,6 +270,69 @@ public class GameController : MonoBehaviour
     void DisableAchievements()
     {
         //achievementPopup.SetActive(false);
+    }
+
+    public class LevelData
+    {
+        public String name;
+        public List<Cube> cubes;
+        public List<Coin> coins;
+
+        public LevelData(String name)
+        {
+            this.name = name;
+            cubes = new List<Cube>();
+            coins = new List<Coin>();
+        }
+        
+
+        public class Cube
+        {
+            public float x1;
+            public float y1;
+            public float z1;
+            public float x2;
+            public float y2;
+            public float z2;
+
+            public float xRot;
+            public float yRot;
+            public float zRot;
+
+            public Cube(float x1, float y1, float z1, float x2, float y2, float z2, float xRot, float yRot, float zRot)
+            {
+                this.x1 = x1;
+                this.y1 = y1;
+                this.z1 = z1;
+                this.x2 = x2;
+                this.y2 = y2;
+                this.z2 = z2;
+                this.xRot = xRot;
+                this.yRot = yRot;
+                this.zRot = zRot;
+            }
+
+            public Cube(float x1, float y1, float z1, float x2, float y2, float z2) : this(x1, y1, z1, x2, y2, z2, 0, 0, 0)
+            {
+
+            }
+        }
+
+        public class Coin
+        {
+            public float x;
+            public float y;
+            public float z;
+            public int type;
+
+            public Coin(float x, float y, float z, int type)
+            {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+                this.type = type;
+            }
+        }
     }
 
     public class Achievement
@@ -302,12 +370,9 @@ public class GameController : MonoBehaviour
     }
 
     // Licheng Modification starts at line 264
-    public static GameController instanceGetter()
-    {
-        return gc;
-    }
 
-    internal int gameModeGetter()
+
+    internal static int gameModeGetter()
     {
         return 0;
     }
@@ -336,4 +401,5 @@ public class GameController : MonoBehaviour
     {
         gameScoreDeductions += deduction;
     }
+
 }

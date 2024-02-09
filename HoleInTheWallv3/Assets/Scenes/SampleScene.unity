@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &903675
 Transform:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &116163498
 Transform:
   m_ObjectHideFlags: 0
@@ -790,6 +790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -936,7 +941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &147378348
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &157553837
 Transform:
   m_ObjectHideFlags: 0
@@ -1134,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &166150344
 Transform:
   m_ObjectHideFlags: 0
@@ -1230,7 +1235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &181285366
 Transform:
   m_ObjectHideFlags: 0
@@ -1438,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &201233990
 Transform:
   m_ObjectHideFlags: 0
@@ -1540,7 +1545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &207714876
 Transform:
   m_ObjectHideFlags: 0
@@ -2003,7 +2008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &254548739
 Transform:
   m_ObjectHideFlags: 0
@@ -2136,7 +2141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &283908800
 Transform:
   m_ObjectHideFlags: 0
@@ -2656,11 +2661,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4777371684598551356, guid: 7f6798c63e092094ea5aacecf2093041, type: 3}
 --- !u!54 &309735882
@@ -2708,6 +2713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -2797,7 +2807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &322875261
 Transform:
   m_ObjectHideFlags: 0
@@ -2903,7 +2913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &326805118
 Transform:
   m_ObjectHideFlags: 0
@@ -2994,6 +3004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3082,7 +3097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &409167443
 Transform:
   m_ObjectHideFlags: 0
@@ -3312,7 +3327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &432589093
 Transform:
   m_ObjectHideFlags: 0
@@ -3414,7 +3429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &444138757
 Transform:
   m_ObjectHideFlags: 0
@@ -3740,7 +3755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &491652307
 Transform:
   m_ObjectHideFlags: 0
@@ -3842,7 +3857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &523079747
 Transform:
   m_ObjectHideFlags: 0
@@ -4122,6 +4137,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4240,7 +4260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &650359539
 Transform:
   m_ObjectHideFlags: 0
@@ -4336,7 +4356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &651166762
 Transform:
   m_ObjectHideFlags: 0
@@ -4444,7 +4464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &694516772
 Transform:
   m_ObjectHideFlags: 0
@@ -4574,7 +4594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &695969667
 Transform:
   m_ObjectHideFlags: 0
@@ -4721,6 +4741,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelStartPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 3890011612380538647, guid: 37db061918ad2264c873904f52a113b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6233058724555570882, guid: 37db061918ad2264c873904f52a113b0,
         type: 3}
       propertyPath: m_Enabled
@@ -4794,6 +4819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelStartPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 3890011612380538647, guid: 37db061918ad2264c873904f52a113b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4817,7 +4847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &730615965
 Transform:
   m_ObjectHideFlags: 0
@@ -4913,7 +4943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &735111887
 Transform:
   m_ObjectHideFlags: 0
@@ -5115,7 +5145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &782499070
 Transform:
   m_ObjectHideFlags: 0
@@ -5356,7 +5386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &897663640
 Transform:
   m_ObjectHideFlags: 0
@@ -5474,7 +5504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &960161919
 Transform:
   m_ObjectHideFlags: 0
@@ -5576,6 +5606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -6073,6 +6108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6146,7 +6186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1032057546
 Transform:
   m_ObjectHideFlags: 0
@@ -6242,7 +6282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1033027853
 Transform:
   m_ObjectHideFlags: 0
@@ -6320,6 +6360,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033027852}
   m_Mesh: {fileID: 4300000, guid: 200be9953d192cd48a8b41a5db3fd1bf, type: 3}
+--- !u!1 &1065259254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065259259}
+  - component: {fileID: 1065259258}
+  - component: {fileID: 1065259257}
+  - component: {fileID: 1065259256}
+  - component: {fileID: 1065259255}
+  m_Layer: 9
+  m_Name: Level Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1065259255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065259254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa240cab0ec7bd143af8ff3fd65c7cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 9214677129034756037, guid: 3b20cb5de18412a469496dcecc6b6cb7,
+    type: 3}
+  coinPrefab: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+    type: 3}
+  redCoinPrefab: {fileID: 3398452786148437318, guid: 04d33729d9c9efb4db8cea650775f069,
+    type: 3}
+  greenCoinPrefab: {fileID: 8707435376947791428, guid: 6bce7be619c10da41be5f770cd6ab42d,
+    type: 3}
+--- !u!64 &1065259256
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065259254}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1065259257
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065259254}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1065259258
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065259254}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1065259259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065259254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1, z: 19.939999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1068185010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,6 +6530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -7041,6 +7213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7129,7 +7306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1272315062
 Transform:
   m_ObjectHideFlags: 0
@@ -7431,7 +7608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1303369293
 Transform:
   m_ObjectHideFlags: 0
@@ -7527,7 +7704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1305704080
 Transform:
   m_ObjectHideFlags: 0
@@ -8038,7 +8215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1382961742
 Transform:
   m_ObjectHideFlags: 0
@@ -8223,7 +8400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1403149845
 Transform:
   m_ObjectHideFlags: 0
@@ -8341,7 +8518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1427208211
 Transform:
   m_ObjectHideFlags: 0
@@ -8431,6 +8608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -8951,6 +9133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelStartPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 3890011612380538647, guid: 37db061918ad2264c873904f52a113b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6233058724555570882, guid: 37db061918ad2264c873904f52a113b0,
         type: 3}
       propertyPath: m_Enabled
@@ -9141,6 +9328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9258,6 +9450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelStartPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890011612380538647, guid: 37db061918ad2264c873904f52a113b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9452,7 +9649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1625607779
 Transform:
   m_ObjectHideFlags: 0
@@ -9554,7 +9751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1672492897
 Transform:
   m_ObjectHideFlags: 0
@@ -9660,7 +9857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1683571147
 Transform:
   m_ObjectHideFlags: 0
@@ -9756,7 +9953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1702803008
 Transform:
   m_ObjectHideFlags: 0
@@ -9948,7 +10145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1724115728
 Transform:
   m_ObjectHideFlags: 0
@@ -10044,7 +10241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1726252949
 Transform:
   m_ObjectHideFlags: 0
@@ -10287,7 +10484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1757442826
 Transform:
   m_ObjectHideFlags: 0
@@ -10589,7 +10786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1802795930
 Transform:
   m_ObjectHideFlags: 0
@@ -10915,7 +11112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1843388487
 Transform:
   m_ObjectHideFlags: 0
@@ -11161,7 +11358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1960017555
 Transform:
   m_ObjectHideFlags: 0
@@ -11360,7 +11557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2033941346
 Transform:
   m_ObjectHideFlags: 0
@@ -11631,6 +11828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11713,6 +11915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -11797,6 +12004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldCoin
       objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11879,6 +12091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GoldCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007442082003547662, guid: ac586d69c2e28c040b87c6b3a8b059f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007442082003839534, guid: ac586d69c2e28c040b87c6b3a8b059f2,
         type: 3}
@@ -12196,7 +12413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &217089318212343557
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12357,7 +12574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &414187687547580522
 Transform:
   m_ObjectHideFlags: 0
@@ -12472,7 +12689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &543309800114302088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12618,7 +12835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &678499537376070510
 Transform:
   m_ObjectHideFlags: 0
@@ -12673,7 +12890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &757937817064891512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12784,7 +13001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &870883663369495257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13041,7 +13258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1062134234783018011
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13196,7 +13413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1260379923988502843
 GameObject:
   m_ObjectHideFlags: 0
@@ -13234,7 +13451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1382695007995609117
 Transform:
   m_ObjectHideFlags: 0
@@ -13355,7 +13572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1401671079120934550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13909,7 +14126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2021575750496273855
 GameObject:
   m_ObjectHideFlags: 0
@@ -13973,7 +14190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &2121763608781201176
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14288,7 +14505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2401835148766870065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14449,7 +14666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2530186053838990019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14590,7 +14807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2762605893529777328
 GameObject:
   m_ObjectHideFlags: 0
@@ -14609,7 +14826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2789260796225813425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14745,7 +14962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2858638340457492729
 GameObject:
   m_ObjectHideFlags: 0
@@ -14761,7 +14978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2881692302347076580
 Transform:
   m_ObjectHideFlags: 0
@@ -14838,7 +15055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &3012861983352778981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14865,7 +15082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &3036987934112604531
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15069,7 +15286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3250498848106902178
 GameObject:
   m_ObjectHideFlags: 0
@@ -15322,7 +15539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3607575549895805081
 Transform:
   m_ObjectHideFlags: 0
@@ -15429,7 +15646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3743117739304459460
 GameObject:
   m_ObjectHideFlags: 0
@@ -15448,7 +15665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3745911424142874522
 Transform:
   m_ObjectHideFlags: 0
@@ -15515,7 +15732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &3841029967494287399
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15550,7 +15767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &3913250951376084494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15587,7 +15804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &3963107605085122206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15627,7 +15844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &3987479470228398289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15667,7 +15884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4065729015813947157
 Transform:
   m_ObjectHideFlags: 0
@@ -15903,7 +16120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4368268776864320335
 Transform:
   m_ObjectHideFlags: 0
@@ -15952,7 +16169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &4553192951094027861
 GameObject:
   m_ObjectHideFlags: 0
@@ -15971,7 +16188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4615789594940711489
 Transform:
   m_ObjectHideFlags: 0
@@ -16047,7 +16264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &4692970245619247521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16347,7 +16564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &4959920702422199015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16413,7 +16630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &4987077326154267996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16512,7 +16729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5105899867285134593
 GameObject:
   m_ObjectHideFlags: 0
@@ -16531,7 +16748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &5153659421396732845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16622,7 +16839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5308013161665568669
 Transform:
   m_ObjectHideFlags: 0
@@ -16794,7 +17011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &5533408953678280568
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16943,7 +17160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5612088976799827296
 GameObject:
   m_ObjectHideFlags: 0
@@ -16962,7 +17179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5723085987829949954
 GameObject:
   m_ObjectHideFlags: 0
@@ -16981,7 +17198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &5734134022524582380
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17057,7 +17274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5805678720668092025
 Transform:
   m_ObjectHideFlags: 0
@@ -17359,7 +17576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6046264901852255419
 GameObject:
   m_ObjectHideFlags: 0
@@ -17378,7 +17595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6060487481197629387
 GameObject:
   m_ObjectHideFlags: 0
@@ -17397,7 +17614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6074588842656434937
 GameObject:
   m_ObjectHideFlags: 0
@@ -17416,7 +17633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6136380851350585073
 GameObject:
   m_ObjectHideFlags: 0
@@ -17432,7 +17649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &6178450722649535598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17575,7 +17792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &6390534302392957028
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17636,7 +17853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &6493671982764820427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17660,7 +17877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6501430070287587365
 Transform:
   m_ObjectHideFlags: 0
@@ -17694,7 +17911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6523351261140075049
 GameObject:
   m_ObjectHideFlags: 0
@@ -17713,7 +17930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &6528130512861759930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17852,7 +18069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6642704521251250419
 GameObject:
   m_ObjectHideFlags: 0
@@ -17890,7 +18107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &6647589859459525663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18046,7 +18263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6760798037306543093
 Transform:
   m_ObjectHideFlags: 0
@@ -18130,7 +18347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6860652217098335542
 GameObject:
   m_ObjectHideFlags: 0
@@ -18149,7 +18366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &6938314505882369787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18210,7 +18427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6956143390033255903
 Transform:
   m_ObjectHideFlags: 0
@@ -18241,7 +18458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &6969161215989740245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18281,7 +18498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &6972312328966074716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18399,7 +18616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &7077093685307799045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18475,7 +18692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &7224874527472160560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18574,7 +18791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &7304672555030285262
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18854,7 +19071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7557118621938931155
 Transform:
   m_ObjectHideFlags: 0
@@ -18904,7 +19121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7749929104502668115
 GameObject:
   m_ObjectHideFlags: 0
@@ -18923,7 +19140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &7788279418008681287
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18984,7 +19201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &7846371489168023903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19095,7 +19312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7903514793028586365
 Transform:
   m_ObjectHideFlags: 0
@@ -19162,7 +19379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7935844691320767198
 Transform:
   m_ObjectHideFlags: 0
@@ -19201,7 +19418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7978944299074687923
 GameObject:
   m_ObjectHideFlags: 0
@@ -19220,7 +19437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7982333342621144292
 GameObject:
   m_ObjectHideFlags: 0
@@ -19347,7 +19564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &8133043014825946530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19405,7 +19622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8176008178887542361
 Transform:
   m_ObjectHideFlags: 0
@@ -19706,7 +19923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &8472416415275536017
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19748,7 +19965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &8596244416284864188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19830,7 +20047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &8622849673896370687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20076,7 +20293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &8795462955777501558
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20139,7 +20356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &8896795179445003473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20179,7 +20396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8919398387517731834
 Transform:
   m_ObjectHideFlags: 0
@@ -20229,7 +20446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &8959000555687438420
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20670,6 +20887,7 @@ SceneRoots:
   - {fileID: 1376021107}
   - {fileID: 307226220}
   - {fileID: 3493470814138602349}
+  - {fileID: 1065259259}
   - {fileID: 1555390378}
   - {fileID: 1813141990}
   - {fileID: 695822478}

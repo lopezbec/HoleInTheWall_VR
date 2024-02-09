@@ -6,19 +6,17 @@ public class Grader : MonoBehaviour
 {
 
     private bool pass = true;
-    private GameController gc;
     public static int score;
     public static int failed;
 
     // Update is called once per frame
     void Update()
     {
-        gc = GameController.instanceGetter();
         if (transform.position.z < -4f)
         {
             if (pass)
             {
-                if (gc.gameModeGetter() == 0)
+                if (GameController.gameModeGetter() == 0)
                 {
                     GameController.NotifyPassed();
                 }
@@ -29,7 +27,7 @@ public class Grader : MonoBehaviour
             else
             {
                 //If not pass, fail streak continues
-                gc.minusStreak();
+                GameController.minusStreak();
             }
 
             //Check after wall has passed if achivement has been completed
@@ -38,7 +36,7 @@ public class Grader : MonoBehaviour
             //    GameController.gc.showAchievement();
             //}
             //Resets the collision counter for every obstacle
-            gc.resetCollisions();
+            GameController.resetCollisions();
 
         }
     }
@@ -52,7 +50,7 @@ public class Grader : MonoBehaviour
     public void Fail()
     {
         pass = false;
-        if (gc.gameModeGetter() == 0)
+        if (GameController.gameModeGetter() == 0)
         {
             GameController.NotifyFailed();
         }
