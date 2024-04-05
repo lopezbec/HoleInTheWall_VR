@@ -20,9 +20,9 @@ public class bodyCollider : MonoBehaviour
     {
         if (!hasCollided && collision.gameObject.tag == "Walls") //if collider hits wall, deduct score once
         {
-            Debug.Log("wall hit");
             hasCollided = true;
-            GameController.DeductScore(100);
+            GameController.PlayerCollided();
+            GameController.AddLog("Collision: " + gameObject.name + " with " + collision.gameObject.name + " at " + collision.gameObject.transform.position.x + ", " + collision.gameObject.transform.position.y + ", " + collision.gameObject.transform.position.z);
         }
         if(collision.gameObject.tag == "LevelStart")//reset at the start of levels
         {

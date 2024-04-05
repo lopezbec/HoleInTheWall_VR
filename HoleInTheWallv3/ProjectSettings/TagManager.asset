@@ -11,6 +11,9 @@ TagManager:
   - Level
   - LevelStart
   - LevelSpawner
+  - CheckMark
+  - XMark
+  - EndMenu
   layers:
   - Default
   - TransparentFX

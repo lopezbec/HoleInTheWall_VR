@@ -15,6 +15,6 @@ public class GreenCoin : CoinCollision
     void OnTriggerEnter(Collider c)
     {
         GameController.DecreaseSpeed();
-        CollectCoin();
+        CollectCoin(c);
     }
 }

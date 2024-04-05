@@ -10,17 +10,36 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    private static GameController gc;
     private static bool gameOn = false;
+    private static float lastLevelTimer = -1;
     private static DateTime startTime;
     private static GameObject[] levels;
     private static double speed = -2;
     private static int gameScore;
     private static int coinCount;
     private static int collisionCount;
-    private static int streak;
+    private static int currStreak;
+    private static int maxStreak;
     private static TMP_Text scoreText;
     private static int gameScoreDeductions;
+    private static string levelsPath = "LevelSets/levels2.xml";
+    private static GameObject checkmark;
+    private static float checkmarkTime;
+    private static GameObject xmark;
+    private static float xmarkTime;
+    private static bool playerCollided;
+    private static int profileID;
+    private static EventLogger logger;
+    private static float logTimer;
+    private static ProfileDataContainer profileContainer;
+    private static ProfileData currProfile;
+    private static string profileXMLPath = "Profiles/testProfile.xml";
+    public static bool isHighscore {get; private set; }  = false;
+
+    public static Dictionary<string, int> achievementToPoints = new Dictionary<string, int>();
+    private static int bonusPoints;
+    private string achievementsPath = "Data/Achievements.txt";
+
 
 
     // Use this for initialization
@@ -29,18 +48,31 @@ public class GameController : MonoBehaviour
         Debug.Log("started");
         
         GameObject scoreTextObj = GameObject.FindWithTag("ScoreText");
+        checkmark = GameObject.FindWithTag("CheckMark");
+        xmark = GameObject.FindWithTag("XMark");
+
         scoreText = scoreTextObj.GetComponent<TMP_Text>();
-        gc = this;
-        //subjectId = System.DateTime.Now.ToString().GetHashCode().ToString();
-        if (!Directory.Exists("DATA"))
-            Directory.CreateDirectory("DATA");
+
+        LoadLevels();
+        LoadAchievements();
+        Debug.Log(achievementToPoints["First Game"]);
+
+        profileContainer = ProfileDataContainer.Load(Path.Combine(Application.dataPath, profileXMLPath));
+
+        EnableProfile(0);
+
+
     }
+
+   
 
     // Update is called once per frame
     void Update()
     {
         if (gameOn)
         {
+            
+
             levels = GameObject.FindGameObjectsWithTag("Level");
 
             foreach (GameObject level in levels)
@@ -49,37 +81,87 @@ public class GameController : MonoBehaviour
             }
             
             gameScore = (int)((Mathf.Abs(levels[0].transform.position.z - 10)) - gameScoreDeductions);
-            if (levels[0].transform.position.z < -280) 
+            
+            if(lastLevelTimer < 0)
+            {
+                if (NoMoreLevels()) lastLevelTimer = Time.time;
+            } else if (Time.time - lastLevelTimer > 3)
             {
                 GameOver();
             }
+
+            if (Time.time - logTimer > 1)
+            {
+                AddLog("Score: " + gameScore);
+                logger.WriteLog();
+                logTimer = Time.time;
+            }
         }
         scoreText.text = "Score: " + gameScore.ToString();
+        
+        float time = Time.time;
+        if(checkmarkTime > 0 && time - checkmarkTime > 3)
+        {
+            checkmark.GetComponent<Renderer>().enabled = false;
+            checkmarkTime = -1;
+        }
+        if (xmarkTime > 0 && time - xmarkTime > 3)
+        {
+            xmark.GetComponent<Renderer>().enabled = false;
+            xmarkTime = -1;
+        }
+
+        
     }
 
+    private bool NoMoreLevels()
+    {
+        foreach (LevelSpawner spawner in LevelSpawner.levelSpawners)
+        {
+            if (spawner.hasLevels()) return false;
+        }
+        return true;
+    }
 
     public void ChangeEnvironment(int input)
     {
-        
+        throw new NotImplementedException();
     }
 
    
 
-
+    public static void EnableProfile(int ID)
+    {
+        Debug.Log(ID);
+        profileID = ID;
+        currProfile = profileContainer.Profiles[ID];
+        if(logger != null) logger.Close();
+        logger = new EventLogger(Path.Combine(Application.dataPath, "Logs/Profile" + ID + "Log.txt"));
+    }
 
 
 
     public static void StartGame()
     {
-        Grader.score = 0;
         gameOn = true;
         startTime = DateTime.Now;
         GameObject.FindWithTag("StartMenu").SetActive(false);
+        SpawnNext();
     }
 
-    void GameOver()
+    public static void GameOver()
     {
         gameOn = false;
+
+        CheckHighscores();
+
+        DeleteLevels();
+
+        ShowEndMenu();
+
+        logger.Close();
+
+        SaveProfiles();
         // writer.WriteLine("\n\n");
         //scorePanel.SetActive(false);
 
@@ -87,6 +169,79 @@ public class GameController : MonoBehaviour
         //summary.text = string.Format("Score:{0}\nCoins:{1}", gameScore, GameController.coinCount);
 
 
+    }
+
+    private static void ShowEndMenu()
+    {
+        Debug.Log(GameObject.FindObjectsOfType<EndMenu>(true).Length);
+        EndMenu endMenu = GameObject.FindObjectsOfType<EndMenu>(true)[0];
+        endMenu.gameObject.SetActive(true);
+        endMenu.UpdateDisplay(isHighscore, gameScore, collisionCount, gameScoreDeductions);
+    }
+
+    private static void DeleteLevels()
+    {
+        GameObject[] levels = GameObject.FindGameObjectsWithTag("Level");
+        foreach (GameObject level in levels)
+        {
+            Destroy(level);
+        }
+    }
+
+    private static void CheckHighscores()
+    {
+        if (gameScore > currProfile.highScore)
+        {
+            currProfile.highScore = gameScore;
+            isHighscore = true;
+        }
+        else isHighscore = false;
+        if(maxStreak > currProfile.topStreak) currProfile.topStreak = maxStreak;
+    }
+
+    public static void LoadLevels()
+    {
+        foreach(LevelSpawner spawner in LevelSpawner.levelSpawners)
+        {
+            spawner.LevelContainer = LevelContainer.Load(Path.Combine(Application.dataPath, levelsPath));
+        }
+
+    }
+
+    private void LoadAchievements()
+    {
+        FileStream f = new FileStream(Path.Combine(Application.dataPath, achievementsPath), FileMode.Open);
+        StreamReader reader = new StreamReader(f);
+
+        while (true)
+        {
+            string line = reader.ReadLine();
+            if (line == null) break;
+            string[] args = line.Split(',');
+            if(args.Length > 1) achievementToPoints[args[0]] = Int32.Parse(args[1]);
+        }
+
+    }
+
+    public static void LevelEnded(LevelSpawner spawner)
+    {
+        SpawnNext();
+        if (!playerCollided)
+        {
+            DisplayCheck();
+            currStreak++;
+            if(currStreak > maxStreak) maxStreak = currStreak;
+        } else
+        {
+            collisionCount++;
+        }
+        playerCollided = false;
+    }
+
+    private static void SpawnNext()
+    {
+        System.Random rnd = new System.Random();
+        LevelSpawner.levelSpawners[rnd.Next(0, LevelSpawner.levelSpawners.Count)].SpawnNext();
     }
 
     public void AddRandomNames()
@@ -133,38 +288,19 @@ public class GameController : MonoBehaviour
 
 
 
-    public static void NotifyPassed()
-    {
-        //passMark.GetComponent<Image>().enabled = true;
-        gc.addStreak();
-    }
 
-    public static void NotifyFailed()
-    {
-        //failMark.GetComponent<Image>().enabled = true;
-    }
-
-    // clear the notification area of the screen
-    public static void ClearNotify()
-    {
-        //passMark.GetComponent<Image>().enabled = false;
-        //failMark.GetComponent<Image>().enabled = false;
-    }
 
     //Achievement Checking
     public void addStreak()
     {
-        streak++;
+        currStreak++;
     }
 
-    public static void minusStreak()
-    {
-        streak--;
-    }
+ 
 
     public static int getStreak()
     {
-        return streak;
+        return currStreak;
     }
 
     public void enableAchievementBoard()
@@ -189,32 +325,13 @@ public class GameController : MonoBehaviour
         //}
     }
 
-    public void addAchievements()
+    public void GiveAchievement(string name)
     {
-        //Achievement five = new Achievement("Five in a Row!", "Pass Five Obstacles in a Row", false);
-        //achievementList.Add(five);
-        //Achievement ten = new Achievement("Ten in a Row!", "Pass Ten Obstacles in a Row", false);
-        //achievementList.Add(ten);
-        //Achievement coins = new Achievement("Coins!", "Collect 20 Coins", false);
-        //achievementList.Add(coins);
-        //Achievement almost = new Achievement("Almost!", "Fail an Obstacle with one collision", false);
-        //achievementList.Add(almost);
-
-        ////Set Text in game to what is determined here, syncs the in game with the code
-        //AName1.text = achievementList[0].getName();
-        //ADesc1.text = achievementList[0].getText();
-        //AName2.text = achievementList[1].getName();
-        //ADesc2.text = achievementList[1].getText();
-        //AName3.text = achievementList[2].getName();
-        //ADesc3.text = achievementList[2].getText();
-        //AName4.text = achievementList[3].getName();
-        //ADesc4.text = achievementList[3].getText();
-
-        ////Adds images to image list to change color of achievement on enter
-        //imageList.Add(a1);
-        //imageList.Add(a2);
-        //imageList.Add(a3);
-        //imageList.Add(a4);
+        if (!currProfile.achievements.Contains(name)) 
+        {
+            currProfile.achievements.Add(name);
+            AwardScore(achievementToPoints[name]);
+        }
     }
 
 
@@ -262,78 +379,13 @@ public class GameController : MonoBehaviour
 
     }
 
-    public static void resetCollisions()
-    {
-        collisionCount = 0;
-    }
 
     void DisableAchievements()
     {
         //achievementPopup.SetActive(false);
     }
 
-    public class LevelData
-    {
-        public String name;
-        public List<Cube> cubes;
-        public List<Coin> coins;
-
-        public LevelData(String name)
-        {
-            this.name = name;
-            cubes = new List<Cube>();
-            coins = new List<Coin>();
-        }
-        
-
-        public class Cube
-        {
-            public float x1;
-            public float y1;
-            public float z1;
-            public float x2;
-            public float y2;
-            public float z2;
-
-            public float xRot;
-            public float yRot;
-            public float zRot;
-
-            public Cube(float x1, float y1, float z1, float x2, float y2, float z2, float xRot, float yRot, float zRot)
-            {
-                this.x1 = x1;
-                this.y1 = y1;
-                this.z1 = z1;
-                this.x2 = x2;
-                this.y2 = y2;
-                this.z2 = z2;
-                this.xRot = xRot;
-                this.yRot = yRot;
-                this.zRot = zRot;
-            }
-
-            public Cube(float x1, float y1, float z1, float x2, float y2, float z2) : this(x1, y1, z1, x2, y2, z2, 0, 0, 0)
-            {
-
-            }
-        }
-
-        public class Coin
-        {
-            public float x;
-            public float y;
-            public float z;
-            public int type;
-
-            public Coin(float x, float y, float z, int type)
-            {
-                this.x = x;
-                this.y = y;
-                this.z = z;
-                this.type = type;
-            }
-        }
-    }
+    
 
     public class Achievement
     {
@@ -369,8 +421,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-    // Licheng Modification starts at line 264
-
 
     internal static int gameModeGetter()
     {
@@ -392,14 +442,67 @@ public class GameController : MonoBehaviour
         coinCount++;
     }
 
-    internal static void AddCollision()
-    {
-        collisionCount++;
-    }
-
     internal static void DeductScore(int deduction)
     {
         gameScoreDeductions += deduction;
     }
 
+    internal static void AwardScore(int addition)
+    {
+        bonusPoints += addition;
+    }
+
+    internal static void PlayerCollided()
+    {
+        DeductScore(10);
+        DisplayX();
+        currStreak = 0;
+        playerCollided = true;
+    }
+
+    private static void DisplayX()
+    {
+        xmark.GetComponent<Renderer>().enabled = true;
+        xmarkTime = Time.time;
+    }
+
+    private static void DisplayCheck()
+    {
+        checkmark.GetComponent<Renderer>().enabled = true;
+        checkmarkTime = Time.time;
+    }
+
+    internal static void ResetProfile()
+    {
+        currProfile.Reset();
+        SaveProfiles();
+    }
+
+    private static void SaveProfiles()
+    {
+        profileContainer.Save(Path.Combine(Application.dataPath, profileXMLPath));
+    }
+
+    internal static void ResetGame()
+    {
+        speed = -2;
+        LoadLevels();
+        gameScore = 0;
+        coinCount = 0;
+        collisionCount = 0;
+        currStreak = 0;
+        maxStreak = 0;
+        gameScoreDeductions = 0;
+        playerCollided = false;
+
+    }
+    internal static void AddLog(string message)
+    {
+        logger.AddLog(message);
+    }
+
+    internal static bool getGameOn()
+    {
+        return gameOn;
+    }
 }

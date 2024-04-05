@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 965980580027066908}
   - component: {fileID: 6233058724555570882}
   - component: {fileID: 8560509776446537222}
+  - component: {fileID: -1837260175641399373}
   m_Layer: 9
   m_Name: LevelStartPlane
   m_TagString: LevelStart
@@ -106,3 +107,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-1837260175641399373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890011612380538647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155616c251d518443b90dfd4fc1d7166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

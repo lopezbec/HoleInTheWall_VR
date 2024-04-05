@@ -16,7 +16,7 @@ public class CoinCollision : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider c) {
-		CollectCoin();
+		CollectCoin(c);
     }
 
     protected void Move()
@@ -26,9 +26,10 @@ public class CoinCollision : MonoBehaviour {
         timeCnt++;
     }
 
-    protected void CollectCoin()
+    protected void CollectCoin(Collider c)
     {
         GameController.AddCoin();
+        GameController.AddLog("Collision: " + gameObject.name + " with " + c.gameObject.name + " at " + c.gameObject.transform.position.x + ", " + c.gameObject.transform.position.y + ", " + c.gameObject.transform.position.z);
         gameObject.SetActive(false);
     }
 }

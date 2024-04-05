@@ -18,6 +18,6 @@ public class RedCoin : CoinCollision
     void OnTriggerEnter(Collider c)
     {
         GameController.IncreaseSpeed();
-        CollectCoin();
+        CollectCoin(c);
     }
 }
