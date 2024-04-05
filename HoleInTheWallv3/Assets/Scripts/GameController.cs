@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
                 level.transform.position += new Vector3(0, 0, (float)speed * Time.deltaTime);
             }
             
-            gameScore = (int)((Mathf.Abs(levels[0].transform.position.z - 10)) - gameScoreDeductions);
+            gameScore = (int)((Mathf.Abs(levels[0].transform.position.z - 10)*2) - gameScoreDeductions + bonusPoints);
             
             if(lastLevelTimer < 0)
             {
@@ -145,6 +145,7 @@ public class GameController : MonoBehaviour
     {
         gameOn = true;
         startTime = DateTime.Now;
+        GiveAchievement("First Game");
         GameObject.FindWithTag("StartMenu").SetActive(false);
         SpawnNext();
     }
@@ -190,6 +191,7 @@ public class GameController : MonoBehaviour
 
     private static void CheckHighscores()
     {
+        if (gameScore >= 1000) GiveAchievement("Score 1000");
         if (gameScore > currProfile.highScore)
         {
             currProfile.highScore = gameScore;
@@ -230,6 +232,8 @@ public class GameController : MonoBehaviour
         {
             DisplayCheck();
             currStreak++;
+            GiveAchievement("Perfect Pass");
+            if (currStreak == 5) GiveAchievement("5 Streak");
             if(currStreak > maxStreak) maxStreak = currStreak;
         } else
         {
@@ -325,7 +329,7 @@ public class GameController : MonoBehaviour
         //}
     }
 
-    public void GiveAchievement(string name)
+    public static void GiveAchievement(string name)
     {
         if (!currProfile.achievements.Contains(name)) 
         {
@@ -494,6 +498,11 @@ public class GameController : MonoBehaviour
         maxStreak = 0;
         gameScoreDeductions = 0;
         playerCollided = false;
+        lastLevelTimer = -1;
+        foreach (LevelSpawner spawner in LevelSpawner.levelSpawners)
+        {
+            spawner.Reset();
+        }
 
     }
     internal static void AddLog(string message)

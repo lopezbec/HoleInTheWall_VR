@@ -101,6 +101,12 @@ public class LevelSpawner : MonoBehaviour
     {
         return !noMoreLevels;
     }
+
+    internal void Reset()
+    {
+        noMoreLevels = false;
+        currLevel = 0;
+    }
 }
 
 
